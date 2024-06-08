@@ -6,13 +6,13 @@ import static org.junit.Assert.*;
 public class LinkShortenerTest {
     @Test
     public void testShortenAndExpand() {
-        LinkShortener shortener = new LinkShortener();
+        LinkShortener shortenner = new LinkShortener();
         String originalUrl = "https://www.example.com";
         
-        String shortUrl = shortener.shorten(originalUrl);
+        String shortUrl = shortenner.shorten(originalUrl);
         assertNotNull(shortUrl);
         
-        String expandedUrl = shortener.expand(shortUrl);
+        String expandedUrl = shortenner.expand(shortUrl);
         assertEquals(originalUrl, expandedUrl);
     }
 }
